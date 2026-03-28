@@ -10,7 +10,7 @@ public class Caretaker {
         history.push(editor.save());
     }
     public void undo(TextEditor editor){
-        if(!history.empty()){
+        if(history.size()>1){
           history.pop();
           editor.restore(history.peek());
         }
